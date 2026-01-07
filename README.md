@@ -6,6 +6,7 @@ Claude Code에서 `/plugin` 명령으로 설치하여 사용할 수 있는 스�
 
 | 스킬 | 설명 |
 |------|------|
+| [security-review](skills/security-review) | OWASP Top 10 2025 기반 보안 취약점 검토 |
 | [code-review](skills/code-review) | 보안, 성능, 유지보수성 관점의 코드 리뷰 |
 | [api-design](skills/api-design) | RESTful API 및 GraphQL 스키마 설계 |
 | [test-generator](skills/test-generator) | 단위/통합/E2E 테스트 생성 |
@@ -45,6 +46,7 @@ git clone https://github.com/roboco-io/claude-skills.git
 설치된 스킬은 자동으로 활성화됩니다. 관련 작업을 요청하면 Claude가 해당 스킬을 사용합니다.
 
 **예시:**
+- "이 코드 보안 검토해줘" → `security-review` 스킬 활성화
 - "이 코드 리뷰해줘" → `code-review` 스킬 활성화
 - "사용자 API 설계해줘" → `api-design` 스킬 활성화
 - "이 함수에 대한 테스트 작성해줘" → `test-generator` 스킬 활성화
