@@ -62,15 +62,30 @@ git clone https://github.com/roboco-io/claude-skills.git
 
 ## 새 스킬 만들기
 
-### 1. 스킬 폴더 생성
+새 플러그인을 만들려면 **[플러그인 제작 가이드](docs/plugin-development-guide.md)**를 참고하세요.
 
-```bash
-mkdir skills/my-new-skill
+### 빠른 시작
+
+1. 스킬 폴더 및 필수 파일 생성:
+
+```
+skills/my-new-skill/
+├── .claude-plugin/
+│   └── plugin.json       # 플러그인 메타데이터
+└── SKILL.md              # 스킬 지침
 ```
 
-### 2. SKILL.md 작성
+2. `plugin.json` 작성:
 
-`skills/my-new-skill/SKILL.md` 파일을 생성합니다:
+```json
+{
+  "name": "my-new-skill",
+  "description": "스킬 설명",
+  "version": "1.0.0"
+}
+```
+
+3. `SKILL.md` 작성:
 
 ```markdown
 ---
@@ -81,45 +96,23 @@ description: 스킬에 대한 설명. Claude가 이 스킬을 언제 사용해�
 # 스킬 제목
 
 Claude가 따를 지침을 여기에 작성합니다.
-
-## 섹션 1
-...
-
-## 섹션 2
-...
 ```
 
-### 3. 스킬 구조
+4. `marketplace.json`에 플러그인 추가:
 
+```json
+{
+  "plugins": [
+    {
+      "name": "my-new-skill",
+      "source": "./skills/my-new-skill",
+      "description": "스킬 설명"
+    }
+  ]
+}
 ```
-skills/
-└── my-new-skill/
-    ├── SKILL.md          # 필수: 스킬 정의 파일
-    ├── scripts/          # 선택: 실행 가능한 스크립트
-    ├── references/       # 선택: 참조 문서
-    └── assets/           # 선택: 이미지 등 리소스
-```
 
-### SKILL.md 필수 필드
-
-| 필드 | 설명 |
-|------|------|
-| `name` | 고유 식별자 (소문자, 하이픈 사용) |
-| `description` | 스킬의 목적과 사용 시점 설명 |
-
-## 스킬 작성 가이드라인
-
-### 핵심 원칙
-
-1. **간결하게 유지**: context window는 공유 자원입니다
-2. **명확한 범위 정의**: 스킬이 언제 활성화되어야 하는지 description에 명시
-3. **실용적인 예제 포함**: 추상적인 설명보다 구체적인 예시가 효과적
-
-### 피해야 할 것
-
-- 너무 일반적인 스킬 (모든 상황에 적용되는)
-- 과도하게 긴 지침 (context 소모)
-- 다른 스킬과 중복되는 기능
+자세한 내용은 [플러그인 제작 가이드](docs/plugin-development-guide.md)를 참고하세요.
 
 ## 라이선스
 
