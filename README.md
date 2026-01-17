@@ -1,6 +1,7 @@
-# Claude Skills Collection
+# Claude Code Plugins
 
-Claude Code에서 `/plugin` 명령으로 설치하여 사용할 수 있는 스킬 모음입니다.
+Claude Code에서 `/plugin` 명령으로 설치하여 사용할 수 있는 플러그인 모음입니다.
+Skills, Commands, Agents, Hooks 등 다양한 플러그인을 제공합니다.
 
 ## 스킬 목록
 
@@ -19,15 +20,15 @@ Claude Code에서 `/plugin` 명령으로 설치하여 사용할 수 있는 스�
 
 ```bash
 # 1. Marketplace 등록
-/plugin marketplace add roboco-io/claude-skills
+/plugin marketplace add roboco-io/plugins
 
 # 2. 원하는 스킬 설치
-/plugin install security-review@roboco-skills
-/plugin install code-review@roboco-skills
-/plugin install api-design@roboco-skills
-/plugin install test-generator@roboco-skills
-/plugin install korean-docs@roboco-skills
-/plugin install git-workflow@roboco-skills
+/plugin install security-review@roboco-plugins
+/plugin install code-review@roboco-plugins
+/plugin install api-design@roboco-plugins
+/plugin install test-generator@roboco-plugins
+/plugin install korean-docs@roboco-plugins
+/plugin install git-workflow@roboco-plugins
 ```
 
 ### 방법 2: 대화형 UI로 설치
@@ -36,7 +37,7 @@ Claude Code에서 `/plugin` 명령으로 설치하여 사용할 수 있는 스�
 # 플러그인 매니저 열기
 /plugin
 
-# Marketplaces 탭에서 roboco-io/claude-skills 추가
+# Marketplaces 탭에서 roboco-io/plugins 추가
 # Discover 탭에서 원하는 스킬 선택하여 설치
 ```
 
@@ -44,10 +45,10 @@ Claude Code에서 `/plugin` 명령으로 설치하여 사용할 수 있는 스�
 
 ```bash
 # 레포지토리 클론
-git clone https://github.com/roboco-io/claude-skills.git
+git clone https://github.com/roboco-io/plugins.git
 
 # Claude Code에서 로컬 경로로 marketplace 등록
-/plugin marketplace add /path/to/claude-skills
+/plugin marketplace add /path/to/plugins
 ```
 
 ## 스킬 사용법
