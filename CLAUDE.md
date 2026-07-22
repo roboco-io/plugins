@@ -31,6 +31,16 @@ plugins/
 
 `aws-well-architected` 스킬은 오케스트레이터로서 6개 Pillar별 하위 스킬(`aws-wa-*`)을 호출하고 통합 리포트를 생성함. 이처럼 스킬이 다른 스킬을 호출하는 패턴이 존재하므로, 오케스트레이터 스킬 수정 시 하위 스킬의 인터페이스(입출력 형식)가 유지되는지 확인 필요.
 
+## 기능 개발 워크플로우 (issues/)
+
+큰 기능은 `issues/{번호}-{slug}/` 디렉토리에서 SPEC → PLAN → TASKS 3단계로 진행됩니다.
+
+- `SPEC.md` — 요구사항·동작 명세
+- `PLAN.md` — 구현 계획·아키텍처 결정
+- `TASKS.md` — 체크박스 작업 목록
+
+신규 기능 작업 시 이 구조를 따르고, 기존 디렉토리(`8-llm-wiki` 등)를 참고하세요.
+
 ## Plugin Development
 
 ### 새 플러그인 추가 시 필수 작업
@@ -118,6 +128,8 @@ description: 스킬 설명. Claude가 언제 이 스킬을 사용해야 하는�
 
 `description`은 Claude가 스킬 선택에 사용하므로, **트리거 조건을 구체적으로** 기술할 것.
 
+새 스킬은 루트의 `template/SKILL.md`를 복사하여 시작하세요. 상세 가이드는 `docs/plugin-development-guide.md` 참조.
+
 ### Progressive Disclosure
 
 SKILL.md는 500줄 이하로 유지하고, 상세 내용은 `references/` 디렉토리에 분리:
@@ -162,6 +174,12 @@ npx vitest run
 
 # 감시 모드
 npx vitest
+
+# 단일 테스트 파일 실행
+npx vitest run src/__tests__/skills.test.ts
+
+# 테스트 이름으로 필터링
+npx vitest run -t "marketplace"
 ```
 
 테스트 구성:
@@ -169,6 +187,16 @@ npx vitest
 - `src/__tests__/plugin-json.test.ts` — 각 plugin.json 검증
 - `src/__tests__/skills.test.ts` — SKILL.md frontmatter, 참조 파일, 줄 수 검증
 - `src/__tests__/integrity.test.ts` — marketplace↔plugin.json↔SKILL.md 정합성
+
+### Hook 스크립트 규약
+
+`plugins/*/skills/*/hooks/*.sh`는 Claude Code 훅 규약을 따릅니다:
+- 입력: stdin으로 JSON (`tool_input.command` 등)
+- 차단: exit code `2` + stdout에 사용자 메시지
+- 통과: exit code `0`
+- 의존성: `jq` 또는 `python3` 중 하나 (둘 다 없으면 graceful degrade)
+
+참고 구현: `plugins/workflow/skills/tidd/hooks/validate.sh`
 
 ### 플러그인 설치 테스트
 
