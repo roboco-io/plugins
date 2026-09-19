@@ -169,7 +169,6 @@ npx vitest
 - `src/__tests__/plugin-json.test.ts` — 각 plugin.json 검증
 - `src/__tests__/skills.test.ts` — SKILL.md frontmatter, 참조 파일, 줄 수 검증
 - `src/__tests__/integrity.test.ts` — marketplace↔plugin.json↔SKILL.md 정합성
-- `src/__tests__/tidd-hook.test.ts` — TiDD 훅 스크립트 동작 검증
 
 ### 플러그인 설치 테스트
 

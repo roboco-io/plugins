@@ -1,6 +1,6 @@
 {
   "name": "workflow",
-  "description": "Git 워크플로우, 브랜치 전략, 커밋 컨벤션, TiDD(Ticket Driven Development) 가이드",
-  "version": "0.3.0",
+  "description": "Intent Document(INTENT.md) 기반 프로젝트 의도 관리 스킬",
+  "version": "0.4.0",
   "category": "workflow"
 }

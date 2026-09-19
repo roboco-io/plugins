@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-09-19
+
+2026-08-03 이후 세션 기록에서 한 번도 호출되지 않은 스킬을 정리. 플러그인 범위를 실제 사용 중인 스킬로 축소.
+
+### Removed
+
+- **workflow**: `git-workflow`, `tidd`, `serverless-migration-advisor` 스킬 삭제. `tidd` 훅 테스트(`src/__tests__/tidd-hook.test.ts`)도 함께 삭제. 남은 스킬은 `intent`.
+- **documentation**: `korean-docs`, `qa`, `qa-list`, `qa-merge` 스킬 삭제. 남은 스킬은 `llm-wiki`.
+
+### Changed
+
+- workflow·documentation 플러그인 설명을 남은 스킬 기준으로 갱신 (marketplace.json, plugin.json, README).
+- `llm-wiki` SKILL.md의 "다른 스킬과의 관계"에서 삭제된 `qa-merge`, `korean-docs` 참조 제거.
+
 ## [0.3.0] - 2026-04-20
 
 베타 릴리즈(`v0.3.0-beta`, 2026-04-19) 내용을 프리릴리즈 단계 없이 정식 릴리즈로 승격. 기능 변경 없음.

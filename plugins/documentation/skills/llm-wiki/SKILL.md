@@ -146,9 +146,8 @@ Phase 3 옵션. `pip install lancedb duckdb sentence-transformers` 전제. 없�
 
 ### 다른 스킬과의 관계
 
-- **`qa-merge`**: Q&A 카드 통합 결과를 `wiki/raw/`에 드롭 → 자동 ingest 대상. Q&A 축적 → 위키 컴파일 파이프라인.
 - **`intent`**: `INTENT.md` 변경 시 `wiki/raw/`로 복사 후 ingest → Why/What/Not/Learnings가 decision·entity 페이지로 분해.
-- **`korean-docs`**: 한국어 출력 규칙과 직교. 위키 페이지 식별자는 영어 허용 (Obsidian 호환).
+- 한국어 출력 규칙과 직교. 위키 페이지 식별자는 영어 허용 (Obsidian 호환).
 
 ### Obsidian
 

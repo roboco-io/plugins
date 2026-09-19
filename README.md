@@ -34,25 +34,18 @@ Skills, Commands, Agents, Hooks 등 다양한 플러그인을 제공합니다.
 
 ### Workflow
 
-Git 워크플로우 및 협업 관련
+프로젝트 의도 관리 관련
 
 | 스킬 | 설명 |
 |------|------|
-| [git-workflow](plugins/workflow/skills/git-workflow) | Git 브랜치 전략 및 커밋 컨벤션 가이드 |
-| [tidd](plugins/workflow/skills/tidd) | TiDD(Ticket Driven Development) - No Ticket, No Commit 원칙 강제 훅 |
 | [intent](plugins/workflow/skills/intent) | Intent Document(INTENT.md) 생성 및 관리 - Why/What/Not/Learnings 기반 프로젝트 의도 문서화 |
-| [serverless-migration-advisor](plugins/workflow/skills/serverless-migration-advisor) | AWS always-on 아키텍처를 서버리스+Spot 패턴으로 이행하는 업스트림 어드바이저. 트레이드오프 평가·리스크 플래깅·단계별 이행 계획 생성 후 구현 스킬(sagemaker-spot-training 등)로 위임. |
 
 ### Documentation
 
-한국어 기술 문서 작성 및 Q&A 기록
+프로젝트 지식 위키 컴파일 관련
 
 | 스킬 | 설명 |
 |------|------|
-| [korean-docs](plugins/documentation/skills/korean-docs) | 전문적인 한국어 기술 문서 작성 |
-| [qa](plugins/documentation/skills/qa) | 기술/수학적 개념 Q&A 기록 |
-| [qa-list](plugins/documentation/skills/qa-list) | 저장된 Q&A 문서 목록 표시 |
-| [qa-merge](plugins/documentation/skills/qa-merge) | Q&A 문서를 통합 레퍼런스로 병합 |
 | [llm-wiki](plugins/documentation/skills/llm-wiki) | Karpathy LLM Wiki 패턴 - 프로젝트 문서를 컴파일 위키로 유지 (qmd 하이브리드 검색, Obsidian 호환) |
 
 ### Memory

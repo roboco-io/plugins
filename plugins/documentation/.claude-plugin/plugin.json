@@ -1,6 +1,6 @@
 {
   "name": "documentation",
-  "description": "한국어 기술 문서 작성 스킬",
-  "version": "0.3.0",
+  "description": "Karpathy LLM Wiki 패턴 기반 프로젝트 지식 위키 컴파일 스킬",
+  "version": "0.4.0",
   "category": "documentation"
 }
