@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-09-25
+
+### Changed
+
+- **intent** (workflow): 의도의 진화 방식을 "Learnings 섹션에 학습 기록 추가"에서 "Why/What/Not 자체를 고쳐 쓰기"로 변경. INTENT.md 생성 시 Learnings 섹션을 만들지 않으며, 변경 이유는 커밋 메시지에 남기고 이력은 `git log -p INTENT.md`로 확인한다. `templates/learning.md` → `templates/evolve.md`(탐구 결과를 섹션별 수정으로 옮기는 템플릿). 기존 INTENT.md의 Learnings 섹션을 Why/What/Not으로 흡수하는 마이그레이션 절차 추가. 생명주기 종료 상태 `killed` → `dropped`.
+- `llm-wiki`의 intent 연동 설명에서 Learnings 제거.
+
 ## [0.4.0] - 2026-09-19
 
 2026-08-03 이후 세션 기록에서 한 번도 호출되지 않은 스킬을 정리. 플러그인 범위를 실제 사용 중인 스킬로 축소.

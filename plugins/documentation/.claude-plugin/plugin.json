@@ -1,6 +1,6 @@
 {
   "name": "documentation",
   "description": "Karpathy LLM Wiki 패턴 기반 프로젝트 지식 위키 컴파일 스킬",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "category": "documentation"
 }

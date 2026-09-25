@@ -43,7 +43,7 @@
     {
       "name": "workflow",
       "source": "./plugins/workflow",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "description": "Intent Document(INTENT.md) 기반 프로젝트 의도 관리",
       "category": "workflow",
       "skills": [
@@ -53,7 +53,7 @@
     {
       "name": "documentation",
       "source": "./plugins/documentation",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "description": "Karpathy LLM Wiki 패턴 기반 프로젝트 지식 위키 컴파일",
       "category": "documentation",
       "skills": [
