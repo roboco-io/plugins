@@ -38,7 +38,7 @@ Skills, Commands, Agents, Hooks 등 다양한 플러그인을 제공합니다.
 
 | 스킬 | 설명 |
 |------|------|
-| [intent](plugins/workflow/skills/intent) | Intent Document(INTENT.md) 생성 및 관리 - Why/What/Not/Learnings 기반 프로젝트 의도 문서화 |
+| [intent](plugins/workflow/skills/intent) | Intent Document(INTENT.md) 생성 및 관리 - Why/What/Not 기반 프로젝트 의도 문서화, 탐구 결과로 Why/What/Not을 고쳐 쓰며 의도 진화 |
 
 ### Documentation
 

@@ -146,7 +146,7 @@ Phase 3 옵션. `pip install lancedb duckdb sentence-transformers` 전제. 없�
 
 ### 다른 스킬과의 관계
 
-- **`intent`**: `INTENT.md` 변경 시 `wiki/raw/`로 복사 후 ingest → Why/What/Not/Learnings가 decision·entity 페이지로 분해.
+- **`intent`**: `INTENT.md` 변경 시 `wiki/raw/`로 복사 후 ingest → Why/What/Not이 decision·entity 페이지로 분해 (의도 변경 이유는 `git log INTENT.md` 커밋 메시지에서 추출).
 - 한국어 출력 규칙과 직교. 위키 페이지 식별자는 영어 허용 (Obsidian 호환).
 
 ### Obsidian
